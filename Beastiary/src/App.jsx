@@ -1,15 +1,16 @@
 import './App.css'
+import Logo from "./assets/Logo.jpg"
 let language = "JavaScript"
 
 function Header({year}) {
   return (
     <header>
       <h1>Beastiary</h1>
+      <img src={Logo} alt="Beastiary Logo" height="80" />
       <h4>est {year}</h4>
     </header>
   );
-} 
-
+}
 const items = [
   { name: "Unicorn", description: "Mythical creatures known for their beauty and grace. Often depicted as white horses with a single horn on their forehead." },
   { name: "Dragon", description: "Large, serpentine creatures that can fly and breathe fire. They are often portrayed as powerful and fearsome beings." },
@@ -27,7 +28,6 @@ const beast = items.map((item, i) => ({
 function Main() {
   return (
     <main>
-      
        <ul>
         {beast.map(beast => (
           <li style={{listStyleType: "none"}} key={beast.id}>
